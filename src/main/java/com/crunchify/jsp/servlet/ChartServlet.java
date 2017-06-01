@@ -46,18 +46,16 @@ public class ChartServlet extends HttpServlet {
 	public JFreeChart getChart() {
 		
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-        dataset.addValue(25.0, "Series 1", "Category 1");   
-        dataset.addValue(34.0, "Series 1", "Category 2");   
-        dataset.addValue(19.0, "Series 2", "Category 1");   
-        dataset.addValue(29.0, "Series 2", "Category 2");   
-        dataset.addValue(41.0, "Series 3", "Category 1");   
-        dataset.addValue(33.0, "Series 3", "Category 2");   
+        dataset.addValue(25.0, "Colmena ", "Kilos");   
+        dataset.addValue(34.0, "Colmena", "Kilos");   
+      
+      
 
 		
         JFreeChart chart = ChartFactory.createBarChart3D(
-            "3D Bar Chart Demo",      // chart title
-            "Category",               // domain axis label
-            "Value",                  // range axis label
+            "DASHBOARD",       // chart title
+            "Total de Kilos de Miel por Colmena",               // domain axis label
+            "Kilos",                  // range axis label
             dataset,                  // data
             PlotOrientation.VERTICAL, // orientation
             true,                     // include legend
