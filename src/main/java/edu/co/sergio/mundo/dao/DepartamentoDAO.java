@@ -117,7 +117,7 @@ public class DepartamentoDAO implements IBaseDatos<Departamento> {
         PreparedStatement preparedStmt=null;
 	    try {
 			preparedStmt = connection.prepareStatement(query);
-			preparedStmt.setInt (1, t.getId_departamento());
+			preparedStmt.setInt(1, t.getId_departamento());
                         preparedStmt.setString (2, t.getNom_departamento());
 			result= preparedStmt.execute();
 	    } catch (SQLException e) {
